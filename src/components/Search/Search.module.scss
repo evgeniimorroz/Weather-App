@@ -1,0 +1,24 @@
+@import '../../vars/vars.scss';
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px solid $color-text;
+    padding: 0 0 5px 10px;
+    color: $color-accent;
+    text-transform: uppercase;
+
+    &::placeholder {
+      color: $color-text;
+    }
+
+    &:focus {
+      border-bottom: 2px solid $color-accent;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+@import '../../vars/vars.scss';
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 1rem;
+
+  &__temp {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    background-color: #42aeeb;
+    border-radius: 10px;
+    box-shadow: -4px 6px 17px 2px #1c91d2;
+
+    .city {
+      color: $color-sec;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .country {
+      color: $color-accent;
+      font-weight: 300;
+    }
+
+    .info {
+      width: 50%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &_digit {
+        color: $color-text;
+        text-align: center;
+        font-size: 3rem;
+        position: relative;
+        font-weight: 400;
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: -1rem;
+          top: 0.7rem;
+          font-size: 1rem;
+          width: 10px;
+          height: 10px;
+          border: 2px solid $color-text;
+          border-radius: 50%;
+        }
+
+        img {
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+
+    .description {
+      text-transform: lowercase;
+      color: $color-text;
+      font-weight: 300;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    height: 100%;
+  }
+  .blocks {
+    background-color: #42aeeb;
+    border-radius: 10px;
+    box-shadow: -4px 6px 17px 2px #1c91d2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0.5rem;
+    height: 4rem;
+    font-weight: 400;
+    span {
+      color: $color-sec;
+    }
+    .data {
+      color: $color-text;
+      align-self: flex-end;
+      i {
+        margin-right: 1rem;
+        color: $color-sec;
+      }
+    }
+  }
+
+  &__date {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    width: 100%;
+    color: $color-sec;
+    background-color: #42aeeb;
+    border-radius: 10px;
+    box-shadow: -4px 6px 17px 2px #1c91d2;
+    height: 2rem;
+    font-weight: 400;
+  }
+}
