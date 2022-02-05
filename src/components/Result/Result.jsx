@@ -7,6 +7,9 @@ export const Result = (props) => {
   const date = new Date().toJSON().slice(0, 10).replace(/-/g, ' ');
   const icons = `http://openweathermap.org/img/w/${weather.weather[0].icon}.png`;
 
+  let wDt = weather.dt * 1000;
+  let wTz = weather.timezone * 1000;
+
   return (
     <div className={s.result}>
       <div className={s.result__temp}>
@@ -40,7 +43,7 @@ export const Result = (props) => {
           <span>Закат</span>{' '}
           <span className={s.data}>
             <i className='far fa-sun'></i>
-            {weather.sys.sunrise}
+            {new Date(wDt - wTz)}
           </span>
         </div>
         <div className={classNames(s.sunrise, s.blocks)}>
